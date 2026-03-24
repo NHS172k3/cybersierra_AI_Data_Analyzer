@@ -1,0 +1,20 @@
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9
+python-dotenv>=1.0
+pandas>=2.0
+openpyxl>=3.1
+xlrd>=2.0
+openai>=1.30,<2.0
+matplotlib>=3.7
+duckdb==1.1.3
+lida==0.0.10
+plotly>=5.18
+pydantic>=2.6
+sqlalchemy
+# PandasAI 1.5.3 — MUST be installed separately with --no-deps because it pins
+# pandas==1.5.3 and duckdb<0.9, neither of which has Python 3.13 wheels.
+# Install command:  pip install pandasai==1.5.3 --no-deps
+# Then install its sub-dependencies that aren't already listed above:
+#   pip install astor "faker>=19.0,<20.0" ipython
+pandasai==1.5.3
