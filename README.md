@@ -12,6 +12,17 @@ AI-powered data exploration app for CSV/Excel files. Upload data, preview rows, 
       localhost:5173         JSON + Plotly spec          localhost:8000
 ```
 
+    ## Continuous Integration
+
+    GitHub Actions workflow file: `.github/workflows/ci.yml`
+
+    On every push to `main` and every pull request, CI runs:
+
+    - Frontend: `npm ci`, `npm run typecheck`, `npm run build`
+    - Backend: `pip install -r requirements.txt`, syntax compile check, FastAPI app import smoke check
+
+    This gives reviewers a quick pass/fail signal that the submitted codebase installs and builds cleanly.
+
 ## Current Feature Set
 
 - Multi-file upload for `.csv`, `.xls`, `.xlsx`.
